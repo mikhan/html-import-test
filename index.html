@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+  <title>Prueba</title>
+  <base href="/">
+  <script type="application/javascript" src="node_modules/angular/angular.js"></script>
+  <script type="application/javascript" src="src/module.js"></script>
+  <link rel="import" href="src/components/prueba/index.html">
+  <link rel="import" href="src/components/nombre/index.html">
+<body>
+<probando name="'Jorge Rojas'"></probando>
+<prueba-nombre name="'Jorge Rojas'"></prueba-nombre>
+<script>
+  document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      angular.bootstrap(document, ['prueba'])
+    }
+  }
+</script>
+</body>
+</html>

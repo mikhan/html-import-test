@@ -1,0 +1,21 @@
+<template id="template">
+  <div>
+    Mi nombre es {{$ctrl.name}}
+  </div>
+</template>
+<script>
+  class PruebaNombreComponent {
+    $onInit () {
+      console.log('$onInit')
+    }
+  }
+
+  angular.module('prueba')
+    .component('pruebaNombre', {
+      controller: PruebaNombreComponent,
+      template: document.currentScript.ownerDocument.getElementById('template').innerHTML,
+      bindings: {
+        name: '<',
+      },
+    })
+</script>
